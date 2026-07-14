@@ -5,12 +5,7 @@
   "name": "MineStats Viewer for OBS",
   "description": "Minecraft statistics overlay served locally for OBS.",
   "authors": ["n05ym"],
-  "contact": {
-    "homepage": "https://github.com/SecondLunchi/MineStatsViewerForOBS",
-    "sources": "https://github.com/SecondLunchi/MineStatsViewerForOBS",
-    "issues": "https://github.com/SecondLunchi/MineStatsViewerForOBS/issues"
-  },
-  "license": "MIT",
+  "license": "All-Rights-Reserved",
   "icon": "assets/minestatsviewer/icon.png",
   "environment": "client",
   "entrypoints": {

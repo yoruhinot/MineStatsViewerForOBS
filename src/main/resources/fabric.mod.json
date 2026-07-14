@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "minestatsviewer",
+  "version": "${version}",
+  "name": "MineStats Viewer for OBS",
+  "description": "Minecraft statistics overlay served locally for OBS.",
+  "authors": ["n05ym"],
+  "contact": {
+    "homepage": "https://github.com/SecondLunchi/MineStatsViewerForOBS",
+    "sources": "https://github.com/SecondLunchi/MineStatsViewerForOBS",
+    "issues": "https://github.com/SecondLunchi/MineStatsViewerForOBS/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/minestatsviewer/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["jp.n05ym.minestatsviewer.MineStatsViewerClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "formatVersion": 1,
+  "game": "minecraft",
+  "versionId": "1.0.0",
+  "name": "MineStats Viewer for OBS",
+  "summary": "Minecraftの統計をOBSへ表示する初心者向けクライアントパック",
+  "files": [
+    {
+      "path": "mods/fabric-api-0.154.2+26.2.jar",
+      "hashes": {
+        "sha1": "3b877ba08c963948290098cb4ab718046b011987",
+        "sha512": "7cedad862e8105a7de8db090c0707c25a14a9472654090861dcf490f834862c3212723e762f6f797a0e4683104f4b3a20d3692fb29d7b5c0af437613283d34db"
+      },
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/P7dR8mSH/versions/Kr4WG5mG/fabric-api-0.154.2%2B26.2.jar"
+      ],
+      "fileSize": 2523877
+    }
+  ],
+  "dependencies": {
+    "minecraft": "26.2",
+    "fabric-loader": "0.19.3"
+  }
+}

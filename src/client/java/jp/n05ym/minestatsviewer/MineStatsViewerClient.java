@@ -48,8 +48,13 @@ public final class MineStatsViewerClient implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(this::updateClientStats);
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             if (++ticks % 5 != 0) return;
-            var players = server.getPlayerList().getPlayers();
-            if (!players.isEmpty()) update(players.getFirst().getUUID().toString(), players.getFirst().getStats());
+            var localPlayer = Minecraft.getInstance().player;
+            if (localPlayer == null) return;
+            var localId = localPlayer.getUUID();
+            server.getPlayerList().getPlayers().stream()
+                    .filter(player -> player.getUUID().equals(localId))
+                    .findFirst()
+                    .ifPresent(player -> update(localId.toString(), player.getStats()));
         });
     }
 
@@ -78,6 +83,11 @@ public final class MineStatsViewerClient implements ClientModInitializer {
             client.getConnection().send(new ServerboundClientCommandPacket(
                     ServerboundClientCommandPacket.Action.REQUEST_STATS));
         }
+        // A new remote player starts with an empty client-side StatsCounter. If
+        // that empty counter becomes the baseline, "session" temporarily equals
+        // the lifetime total when the first packet arrives. Give the initial
+        // REQUEST_STATS response time to populate the counter before baselining.
+        if (multiplayerSyncTicks < 40) return;
         if (++ticks % 5 == 0) update(client.player.getUUID().toString(), client.player.getStats());
     }
 
@@ -105,10 +115,11 @@ public final class MineStatsViewerClient implements ClientModInitializer {
             HttpServer server = HttpServer.create(new InetSocketAddress("127.0.0.1", 8765), 0);
             server.createContext("/", e -> redirect(e, "/overlay"));
             server.createContext("/overlay", e -> text(e, 200, "text/html; charset=utf-8", WebPages.OVERLAY));
-            server.createContext("/settings", e -> text(e, 200, "text/html; charset=utf-8", WebPages.SETTINGS));
+            server.createContext("/settings", e -> text(e, 200, "text/html; charset=utf-8", SettingsPage.HTML));
             server.createContext("/api/stats", e -> json(e, CURRENT.get().json()));
             server.createContext("/api/catalog", e -> json(e, catalog == null ? "[]" : catalog.json()));
             server.createContext("/api/config", MineStatsViewerClient::configRequest);
+            server.createContext("/api/session/reset", MineStatsViewerClient::resetSessionRequest);
             server.createContext("/api/icon", MineStatsViewerClient::iconRequest);
             server.setExecutor(Executors.newVirtualThreadPerTaskExecutor());
             server.start();
@@ -126,6 +137,24 @@ public final class MineStatsViewerClient implements ClientModInitializer {
             config.save(body);
             json(e, config.json());
         } catch (Exception ex) { text(e, 400, "text/plain; charset=utf-8", ex.getMessage()); }
+    }
+
+    private static void resetSessionRequest(HttpExchange e) throws IOException {
+        if (!e.getRequestMethod().equals("POST")) {
+            text(e, 405, "text/plain", "Method not allowed");
+            return;
+        }
+        State state = CURRENT.get();
+        if (!state.connected()) {
+            text(e, 409, "text/plain; charset=utf-8", "ワールドへ入ってから実行してください");
+            return;
+        }
+        baseline = new LinkedHashMap<>(state.total());
+        Map<String, Integer> session = new LinkedHashMap<>();
+        state.total().keySet().forEach(key -> session.put(key, 0));
+        State reset = new State(true, state.total(), session);
+        CURRENT.set(reset);
+        json(e, reset.json());
     }
 
     private static void iconRequest(HttpExchange e) throws IOException {

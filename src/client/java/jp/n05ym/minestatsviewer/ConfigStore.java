@@ -52,12 +52,16 @@ final class ConfigStore {
         root.addProperty("title", "MINE STATS");
         root.addProperty("showTitle", true);
         root.addProperty("accent", "#9cf26d");
+        root.addProperty("titleColor", "#9cf26d");
         root.addProperty("textColor", "#ffffff");
+        root.addProperty("labelColor", "#ffffff");
+        root.addProperty("valueColor", "#9cf26d");
         root.addProperty("background", "#111c16");
         root.addProperty("backgroundOpacity", 94);
         root.addProperty("columns", 1);
         root.addProperty("panelPadding", 24);
         root.addProperty("itemGap", 7);
+        root.addProperty("elementGap", 12);
         root.addProperty("labelSize", 26);
         root.addProperty("valueSize", 40);
         root.addProperty("iconSize", 44);
@@ -67,12 +71,18 @@ final class ConfigStore {
         root.addProperty("valueWidth", 180);
         root.addProperty("radius", 16);
         root.addProperty("borderWidth", 3);
+        root.addProperty("resolutionScale", 1);
+        root.addProperty("resolutionPreset", "1080");
+        root.addProperty("layoutPreset", "standard");
+        root.addProperty("themePreset", "green");
+        root.addProperty("labelVisible", true);
+        root.add("customPresets", new JsonArray());
         JsonArray widgets = new JsonArray();
         widgets.add(widget("採掘ブロック", "⛏", "block", "minecraft:stone", "session",
                 terms("minecraft:mined|minecraft:stone", "minecraft:mined|minecraft:deepslate")));
         widgets.add(widget("ダイヤ鉱石", "💎", "block", "minecraft:diamond_ore", "session",
                 terms("minecraft:mined|minecraft:diamond_ore", "minecraft:mined|minecraft:deepslate_diamond_ore")));
-        widgets.add(widget("死亡回数", "💀", "none", "", "total",
+        widgets.add(widget("死んだ回数", "💀", "none", "", "total",
                 terms("minecraft:custom|minecraft:deaths")));
         root.add("widgets", widgets);
         return root;
@@ -99,8 +109,9 @@ final class ConfigStore {
         w.addProperty("iconId", iconId);
         w.addProperty("source", source);
         w.addProperty("format", "number");
-        w.addProperty("color", "#ffffff");
+        w.addProperty("color", "#9cf26d");
         w.addProperty("visible", true);
+        w.addProperty("labelVisible", true);
         w.add("terms", terms);
         return w;
     }

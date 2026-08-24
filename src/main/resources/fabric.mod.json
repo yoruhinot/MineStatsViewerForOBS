@@ -4,7 +4,12 @@
   "version": "${version}",
   "name": "MineStats Viewer for OBS",
   "description": "Minecraft statistics overlay served locally for OBS.",
-  "authors": ["n05ym"],
+  "authors": ["yoruhinot"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/minestats-viewer-for-obs",
+    "sources": "https://github.com/yoruhinot/MineStatsViewerForOBS",
+    "issues": "https://github.com/yoruhinot/MineStatsViewerForOBS/issues"
+  },
   "license": "All-Rights-Reserved",
   "icon": "assets/minestatsviewer/icon.png",
   "environment": "client",

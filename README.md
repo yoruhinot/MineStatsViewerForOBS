@@ -12,6 +12,8 @@ Press `F8` in a world, open Settings, then copy the suggested URL and size into 
 
 For manual installation, put the release JAR and [Fabric API](https://modrinth.com/mod/fabric-api) in your `mods` folder.
 
+[Streamer preset pack (12 designs, Japanese and English)](presets/README.md)
+
 ## 日本語
 
 Minecraft Java Edition 26.2の統計を、OBSへほぼリアルタイム表示するFabricクライアントMODです。全バニラ統計、計算カウンター、Minecraftアイコン、プリセット、日英対応の設定画面を搭載しています。
@@ -21,6 +23,8 @@ Minecraft Java Edition 26.2の統計を、OBSへほぼリアルタイム表示�
 3. **プレイ**を押します。
 
 ワールド内で`F8`を押し、設定画面のURLと推奨サイズをOBSのブラウザソースへ入力してください。設定は自動保存され、マルチでも統計画面を開く必要はありません。
+
+[配信者向けプリセット集（12デザイン・日英対応）](presets/README.md)
 
 [Customization design / カスタマイズ設計](docs/CUSTOMIZATION_DESIGN.md)
 

@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "showTitle": false,
+  "title": "",
+  "fontPreset": "modern",
+  "accent": "#ffffff",
+  "titleColor": "#ffffff",
+  "textColor": "#ffffff",
+  "labelColor": "#ffffff",
+  "valueColor": "#ffd6e8",
+  "background": "#13131a",
+  "backgroundOpacity": 0,
+  "columns": 4,
+  "panelPadding": 6,
+  "itemGap": 0,
+  "elementGap": 7,
+  "itemWidth": 245,
+  "valueWidth": 100,
+  "columnGap": 16,
+  "titleSize": 0,
+  "iconSize": 32,
+  "labelSize": 18,
+  "valueSize": 28,
+  "radius": 0,
+  "borderWidth": 0,
+  "resolutionScale": 1,
+  "resolutionPreset": "1080",
+  "layoutPreset": "custom",
+  "themePreset": "custom",
+  "labelVisible": true,
+  "customPresets": [],
+  "uiLanguage": "ja",
+  "widgets": [
+    {
+      "id": "transparent-bottom-bar-mined-1",
+      "label": "総採掘数",
+      "emoji": "⛏",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond_pickaxe",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#ffd6e8",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ffffff",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "prefix": "minecraft:mined|",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "transparent-bottom-bar-diamond-2",
+      "label": "ダイヤ鉱石",
+      "emoji": "💎",
+      "iconKind": "block",
+      "iconId": "minecraft:diamond_ore",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#ffd6e8",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ffffff",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:mined|minecraft:diamond_ore",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_diamond_ore",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "transparent-bottom-bar-kills-3",
+      "label": "Mob討伐",
+      "emoji": "⚔",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond_sword",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#ffd6e8",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ffffff",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:mob_kills",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "transparent-bottom-bar-deaths-4",
+      "label": "死んだ回数",
+      "emoji": "💀",
+      "iconKind": "item",
+      "iconId": "minecraft:skeleton_skull",
+      "source": "total",
+      "operation": "sum",
+      "format": "number",
+      "color": "#ffd6e8",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ffffff",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:deaths",
+          "factor": 1
+        }
+      ]
+    }
+  ]
+}

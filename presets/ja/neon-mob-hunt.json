@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "showTitle": true,
+  "title": "MOB HUNT",
+  "fontPreset": "game",
+  "accent": "#2af4ed",
+  "titleColor": "#ffffff",
+  "textColor": "#dcd8ff",
+  "labelColor": "#dcd8ff",
+  "valueColor": "#ff58d0",
+  "background": "#111024",
+  "backgroundOpacity": 90,
+  "columns": 2,
+  "panelPadding": 22,
+  "itemGap": 6,
+  "elementGap": 10,
+  "itemWidth": 305,
+  "valueWidth": 120,
+  "columnGap": 20,
+  "titleSize": 38,
+  "iconSize": 38,
+  "labelSize": 20,
+  "valueSize": 36,
+  "radius": 14,
+  "borderWidth": 3,
+  "resolutionScale": 1,
+  "resolutionPreset": "1080",
+  "layoutPreset": "custom",
+  "themePreset": "custom",
+  "labelVisible": true,
+  "customPresets": [],
+  "uiLanguage": "ja",
+  "widgets": [
+    {
+      "id": "neon-mob-hunt-totalKills-1",
+      "label": "総討伐数",
+      "emoji": "⚔",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond_sword",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#ff58d0",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "glow",
+      "animationColor": "#2af4ed",
+      "animationDuration": 650,
+      "terms": [
+        {
+          "prefix": "minecraft:killed|",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "neon-mob-hunt-killRate-2",
+      "label": "1時間あたり",
+      "emoji": "⏱",
+      "iconKind": "item",
+      "iconId": "minecraft:clock",
+      "source": "session",
+      "operation": "rate",
+      "format": "number",
+      "color": "#ff58d0",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "glow",
+      "animationColor": "#2af4ed",
+      "animationDuration": 650,
+      "terms": [
+        {
+          "prefix": "minecraft:killed|",
+          "factor": 1
+        }
+      ],
+      "suffixText": " 体/時",
+      "suffixColor": "#ff58d0",
+      "suffixSize": 16
+    },
+    {
+      "id": "neon-mob-hunt-remaining500-3",
+      "label": "500体まであと",
+      "emoji": "🎯",
+      "iconKind": "item",
+      "iconId": "minecraft:target",
+      "source": "session",
+      "operation": "remaining",
+      "format": "number",
+      "color": "#ff58d0",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "glow",
+      "animationColor": "#2af4ed",
+      "animationDuration": 650,
+      "terms": [
+        {
+          "prefix": "minecraft:killed|",
+          "factor": 1
+        }
+      ],
+      "target": 500,
+      "suffixText": " 体",
+      "suffixColor": "#ff58d0",
+      "suffixSize": 16
+    },
+    {
+      "id": "neon-mob-hunt-creeperShare-4",
+      "label": "クリーパーの割合",
+      "emoji": "💥",
+      "iconKind": "item",
+      "iconId": "minecraft:gunpowder",
+      "source": "session",
+      "operation": "share",
+      "format": "percent",
+      "color": "#ff58d0",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "glow",
+      "animationColor": "#2af4ed",
+      "animationDuration": 650,
+      "terms": [
+        {
+          "stat": "minecraft:killed|minecraft:creeper",
+          "factor": 1,
+          "role": "a"
+        },
+        {
+          "stat": "minecraft:killed|minecraft:zombie",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:killed|minecraft:skeleton",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:killed|minecraft:spider",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:killed|minecraft:enderman",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:killed|minecraft:witch",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:killed|minecraft:drowned",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:killed|minecraft:slime",
+          "factor": 1,
+          "role": "b"
+        }
+      ]
+    }
+  ]
+}

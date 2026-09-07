@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "showTitle": true,
+  "title": "HARDCORE",
+  "fontPreset": "serif",
+  "accent": "#d7b56d",
+  "titleColor": "#f2dfb1",
+  "textColor": "#eee5d4",
+  "labelColor": "#ddd1bd",
+  "valueColor": "#ff7c78",
+  "background": "#17151b",
+  "backgroundOpacity": 94,
+  "columns": 1,
+  "panelPadding": 22,
+  "itemGap": 6,
+  "elementGap": 10,
+  "itemWidth": 445,
+  "valueWidth": 185,
+  "columnGap": 20,
+  "titleSize": 44,
+  "iconSize": 38,
+  "labelSize": 20,
+  "valueSize": 40,
+  "radius": 8,
+  "borderWidth": 2,
+  "resolutionScale": 1,
+  "resolutionPreset": "1080",
+  "layoutPreset": "custom",
+  "themePreset": "custom",
+  "labelVisible": true,
+  "customPresets": [],
+  "uiLanguage": "en",
+  "widgets": [
+    {
+      "id": "dark-elegant-hardcore-playTotal-1",
+      "label": "Play time",
+      "emoji": "⏱",
+      "iconKind": "item",
+      "iconId": "minecraft:clock",
+      "source": "total",
+      "operation": "sum",
+      "format": "time",
+      "color": "#ff7c78",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": false,
+      "animationType": "color",
+      "animationColor": "#d7b56d",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:play_time",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "dark-elegant-hardcore-alive-2",
+      "label": "Time alive",
+      "emoji": "❤",
+      "iconKind": "item",
+      "iconId": "minecraft:totem_of_undying",
+      "source": "total",
+      "operation": "sum",
+      "format": "time",
+      "color": "#ff7c78",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": false,
+      "animationType": "color",
+      "animationColor": "#d7b56d",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:time_since_death",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "dark-elegant-hardcore-deaths-3",
+      "label": "Deaths",
+      "emoji": "💀",
+      "iconKind": "item",
+      "iconId": "minecraft:skeleton_skull",
+      "source": "total",
+      "operation": "sum",
+      "format": "number",
+      "color": "#ff7c78",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#d7b56d",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:deaths",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "dark-elegant-hardcore-kills-4",
+      "label": "Mob kills",
+      "emoji": "⚔",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond_sword",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#ff7c78",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#d7b56d",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:mob_kills",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "dark-elegant-hardcore-totems-5",
+      "label": "Totems used",
+      "emoji": "✨",
+      "iconKind": "item",
+      "iconId": "minecraft:totem_of_undying",
+      "source": "total",
+      "operation": "sum",
+      "format": "number",
+      "color": "#ff7c78",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#d7b56d",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:used|minecraft:totem_of_undying",
+          "factor": 1
+        }
+      ]
+    }
+  ]
+}

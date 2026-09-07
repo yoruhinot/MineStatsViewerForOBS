@@ -1,0 +1,301 @@
+{
+  "version": 1,
+  "showTitle": true,
+  "title": "BUILD LOG",
+  "fontPreset": "modern",
+  "accent": "#f5a27d",
+  "titleColor": "#874d38",
+  "textColor": "#874d38",
+  "labelColor": "#916a5a",
+  "valueColor": "#d46d4c",
+  "background": "#fff2ea",
+  "backgroundOpacity": 92,
+  "columns": 2,
+  "panelPadding": 22,
+  "itemGap": 6,
+  "elementGap": 10,
+  "itemWidth": 335,
+  "valueWidth": 125,
+  "columnGap": 20,
+  "titleSize": 38,
+  "iconSize": 38,
+  "labelSize": 20,
+  "valueSize": 36,
+  "radius": 20,
+  "borderWidth": 2,
+  "resolutionScale": 1,
+  "resolutionPreset": "1080",
+  "layoutPreset": "custom",
+  "themePreset": "custom",
+  "labelVisible": true,
+  "customPresets": [],
+  "uiLanguage": "ja",
+  "widgets": [
+    {
+      "id": "peach-building-log-playSession-1",
+      "label": "プレイ時間",
+      "emoji": "⏱",
+      "iconKind": "item",
+      "iconId": "minecraft:clock",
+      "source": "session",
+      "operation": "sum",
+      "format": "time",
+      "color": "#d46d4c",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": false,
+      "animationType": "color",
+      "animationColor": "#f5a27d",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:play_time",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "peach-building-log-stonePlaced-2",
+      "label": "石系ブロック使用",
+      "emoji": "🧱",
+      "iconKind": "block",
+      "iconId": "minecraft:stone_bricks",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#d46d4c",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#f5a27d",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:used|minecraft:stone",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:cobblestone",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:stone_bricks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:deepslate",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:cobbled_deepslate",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:deepslate_bricks",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "peach-building-log-woodPlaced-3",
+      "label": "木材使用",
+      "emoji": "🪵",
+      "iconKind": "block",
+      "iconId": "minecraft:oak_planks",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#d46d4c",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#f5a27d",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:used|minecraft:oak_planks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:spruce_planks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:birch_planks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:jungle_planks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:acacia_planks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:dark_oak_planks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:mangrove_planks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:cherry_planks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:pale_oak_planks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:bamboo_planks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:crimson_planks",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:warped_planks",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "peach-building-log-glassPlaced-4",
+      "label": "ガラス使用",
+      "emoji": "◇",
+      "iconKind": "block",
+      "iconId": "minecraft:glass",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#d46d4c",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#f5a27d",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:used|minecraft:glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:white_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:orange_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:magenta_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:light_blue_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:yellow_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:lime_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:pink_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:gray_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:light_gray_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:cyan_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:purple_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:blue_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:brown_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:green_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:red_stained_glass",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:used|minecraft:black_stained_glass",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "peach-building-log-mined-5",
+      "label": "総採掘数",
+      "emoji": "⛏",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond_pickaxe",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#d46d4c",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#f5a27d",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "prefix": "minecraft:mined|",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "peach-building-log-deaths-6",
+      "label": "死んだ回数",
+      "emoji": "💀",
+      "iconKind": "item",
+      "iconId": "minecraft:skeleton_skull",
+      "source": "total",
+      "operation": "sum",
+      "format": "number",
+      "color": "#d46d4c",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#f5a27d",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:deaths",
+          "factor": 1
+        }
+      ]
+    }
+  ]
+}

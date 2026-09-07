@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "showTitle": true,
+  "title": "VTUBER STATS",
+  "fontPreset": "modern",
+  "accent": "#ff9bc4",
+  "titleColor": "#75435d",
+  "textColor": "#70405b",
+  "labelColor": "#765266",
+  "valueColor": "#df568f",
+  "background": "#fff1f6",
+  "backgroundOpacity": 92,
+  "columns": 2,
+  "panelPadding": 22,
+  "itemGap": 6,
+  "elementGap": 10,
+  "itemWidth": 310,
+  "valueWidth": 120,
+  "columnGap": 20,
+  "titleSize": 38,
+  "iconSize": 38,
+  "labelSize": 20,
+  "valueSize": 36,
+  "radius": 28,
+  "borderWidth": 3,
+  "resolutionScale": 1,
+  "resolutionPreset": "1080",
+  "layoutPreset": "custom",
+  "themePreset": "custom",
+  "labelVisible": true,
+  "customPresets": [],
+  "uiLanguage": "en",
+  "widgets": [
+    {
+      "id": "pastel-pink-vtuber-mined-1",
+      "label": "Blocks mined",
+      "emoji": "⛏",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond_pickaxe",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#df568f",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ff9bc4",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "prefix": "minecraft:mined|",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "pastel-pink-vtuber-diamond-2",
+      "label": "Diamond ore",
+      "emoji": "💎",
+      "iconKind": "block",
+      "iconId": "minecraft:diamond_ore",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#df568f",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ff9bc4",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:mined|minecraft:diamond_ore",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_diamond_ore",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "pastel-pink-vtuber-deaths-3",
+      "label": "Deaths",
+      "emoji": "💀",
+      "iconKind": "item",
+      "iconId": "minecraft:skeleton_skull",
+      "source": "total",
+      "operation": "sum",
+      "format": "number",
+      "color": "#df568f",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ff9bc4",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:deaths",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "pastel-pink-vtuber-playSession-4",
+      "label": "Play time",
+      "emoji": "⏱",
+      "iconKind": "item",
+      "iconId": "minecraft:clock",
+      "source": "session",
+      "operation": "sum",
+      "format": "time",
+      "color": "#df568f",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": false,
+      "animationType": "color",
+      "animationColor": "#ff9bc4",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:play_time",
+          "factor": 1
+        }
+      ]
+    }
+  ]
+}

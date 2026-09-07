@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "showTitle": true,
+  "title": "STATS",
+  "fontPreset": "modern",
+  "accent": "#151515",
+  "titleColor": "#151515",
+  "textColor": "#151515",
+  "labelColor": "#3d3d3d",
+  "valueColor": "#151515",
+  "background": "#ffffff",
+  "backgroundOpacity": 88,
+  "columns": 1,
+  "panelPadding": 18,
+  "itemGap": 4,
+  "elementGap": 10,
+  "itemWidth": 365,
+  "valueWidth": 135,
+  "columnGap": 20,
+  "titleSize": 38,
+  "iconSize": 38,
+  "labelSize": 20,
+  "valueSize": 36,
+  "radius": 0,
+  "borderWidth": 2,
+  "resolutionScale": 1,
+  "resolutionPreset": "1080",
+  "layoutPreset": "custom",
+  "themePreset": "custom",
+  "labelVisible": true,
+  "customPresets": [],
+  "uiLanguage": "en",
+  "widgets": [
+    {
+      "id": "monochrome-clean-mined-1",
+      "label": "Blocks mined",
+      "emoji": "⛏",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond_pickaxe",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#151515",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#151515",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "prefix": "minecraft:mined|",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "monochrome-clean-diamond-2",
+      "label": "Diamond ore",
+      "emoji": "💎",
+      "iconKind": "block",
+      "iconId": "minecraft:diamond_ore",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#151515",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#151515",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:mined|minecraft:diamond_ore",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_diamond_ore",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "monochrome-clean-deaths-3",
+      "label": "Deaths",
+      "emoji": "💀",
+      "iconKind": "item",
+      "iconId": "minecraft:skeleton_skull",
+      "source": "total",
+      "operation": "sum",
+      "format": "number",
+      "color": "#151515",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#151515",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:deaths",
+          "factor": 1
+        }
+      ]
+    }
+  ]
+}

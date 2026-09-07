@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "showTitle": true,
+  "title": "DIAMOND DREAM",
+  "fontPreset": "modern",
+  "accent": "#bea5f5",
+  "titleColor": "#67528f",
+  "textColor": "#67528f",
+  "labelColor": "#76669a",
+  "valueColor": "#8464d5",
+  "background": "#f5efff",
+  "backgroundOpacity": 92,
+  "columns": 2,
+  "panelPadding": 22,
+  "itemGap": 6,
+  "elementGap": 10,
+  "itemWidth": 325,
+  "valueWidth": 130,
+  "columnGap": 20,
+  "titleSize": 38,
+  "iconSize": 38,
+  "labelSize": 20,
+  "valueSize": 36,
+  "radius": 30,
+  "borderWidth": 3,
+  "resolutionScale": 1,
+  "resolutionPreset": "1080",
+  "layoutPreset": "custom",
+  "themePreset": "custom",
+  "labelVisible": true,
+  "customPresets": [],
+  "uiLanguage": "en",
+  "widgets": [
+    {
+      "id": "lavender-diamond-dream-diamond-1",
+      "label": "Diamond ore",
+      "emoji": "💎",
+      "iconKind": "block",
+      "iconId": "minecraft:diamond_ore",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#8464d5",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#bea5f5",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:mined|minecraft:diamond_ore",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_diamond_ore",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "lavender-diamond-dream-remaining100-2",
+      "label": "Until 100",
+      "emoji": "🎯",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond",
+      "source": "session",
+      "operation": "remaining",
+      "format": "number",
+      "color": "#8464d5",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#bea5f5",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:mined|minecraft:diamond_ore",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_diamond_ore",
+          "factor": 1
+        }
+      ],
+      "target": 100,
+      "suffixText": " items",
+      "suffixColor": "#8464d5",
+      "suffixSize": 16
+    },
+    {
+      "id": "lavender-diamond-dream-diamondRate-3",
+      "label": "Per hour",
+      "emoji": "⏱",
+      "iconKind": "item",
+      "iconId": "minecraft:clock",
+      "source": "session",
+      "operation": "rate",
+      "format": "number",
+      "color": "#8464d5",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#bea5f5",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:mined|minecraft:diamond_ore",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_diamond_ore",
+          "factor": 1
+        }
+      ],
+      "suffixText": " /h",
+      "suffixColor": "#8464d5",
+      "suffixSize": 16
+    },
+    {
+      "id": "lavender-diamond-dream-diamondShare-4",
+      "label": "Diamond share of ores",
+      "emoji": "◇",
+      "iconKind": "item",
+      "iconId": "minecraft:spyglass",
+      "source": "session",
+      "operation": "share",
+      "format": "percent",
+      "color": "#8464d5",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#bea5f5",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:mined|minecraft:coal_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_coal_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:iron_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_iron_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:copper_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_copper_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:gold_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_gold_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:redstone_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_redstone_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:emerald_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_emerald_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:lapis_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_lapis_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:diamond_ore",
+          "factor": 1,
+          "role": "a"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_diamond_ore",
+          "factor": 1,
+          "role": "a"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:nether_gold_ore",
+          "factor": 1,
+          "role": "b"
+        },
+        {
+          "stat": "minecraft:mined|minecraft:nether_quartz_ore",
+          "factor": 1,
+          "role": "b"
+        }
+      ]
+    }
+  ]
+}

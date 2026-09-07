@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "showTitle": true,
+  "title": "COZY MINECRAFT",
+  "fontPreset": "serif",
+  "accent": "#8adbbd",
+  "titleColor": "#356d5a",
+  "textColor": "#356d5a",
+  "labelColor": "#547d70",
+  "valueColor": "#3b9e7b",
+  "background": "#effbf6",
+  "backgroundOpacity": 92,
+  "columns": 2,
+  "panelPadding": 22,
+  "itemGap": 6,
+  "elementGap": 10,
+  "itemWidth": 315,
+  "valueWidth": 115,
+  "columnGap": 20,
+  "titleSize": 38,
+  "iconSize": 38,
+  "labelSize": 20,
+  "valueSize": 36,
+  "radius": 26,
+  "borderWidth": 2,
+  "resolutionScale": 1,
+  "resolutionPreset": "1080",
+  "layoutPreset": "custom",
+  "themePreset": "custom",
+  "labelVisible": true,
+  "customPresets": [],
+  "uiLanguage": "ja",
+  "widgets": [
+    {
+      "id": "mint-cozy-chat-fish-1",
+      "label": "釣った魚",
+      "emoji": "🎣",
+      "iconKind": "item",
+      "iconId": "minecraft:fishing_rod",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#3b9e7b",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#8adbbd",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:fish_caught",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "mint-cozy-chat-bred-2",
+      "label": "動物を繁殖",
+      "emoji": "🐄",
+      "iconKind": "item",
+      "iconId": "minecraft:wheat",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#3b9e7b",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#8adbbd",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:animals_bred",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "mint-cozy-chat-trades-3",
+      "label": "村人との取引",
+      "emoji": "💚",
+      "iconKind": "item",
+      "iconId": "minecraft:emerald",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#3b9e7b",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#8adbbd",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:traded_with_villager",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "mint-cozy-chat-sleep-4",
+      "label": "ベッドで寝た回数",
+      "emoji": "☾",
+      "iconKind": "item",
+      "iconId": "minecraft:pink_bed",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#3b9e7b",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#8adbbd",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:sleep_in_bed",
+          "factor": 1
+        }
+      ]
+    }
+  ]
+}

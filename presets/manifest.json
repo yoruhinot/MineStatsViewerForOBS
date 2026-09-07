@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "generatedFor": "MineStats Viewer for OBS 1.1.0+",
+  "presets": [
+    {
+      "id": "pastel-pink-vtuber",
+      "name": {
+        "ja": "パステルピンク VTuber",
+        "en": "Pastel Pink VTuber"
+      },
+      "description": {
+        "ja": "雑談・採掘配信。右上や左上に置く2列パネル。",
+        "en": "A soft two-column panel for chatting and mining streams."
+      },
+      "files": {
+        "ja": "ja/pastel-pink-vtuber.json",
+        "en": "en/pastel-pink-vtuber.json"
+      }
+    },
+    {
+      "id": "pastel-blue-vtuber",
+      "name": {
+        "ja": "パステルブルー VTuber",
+        "en": "Pastel Blue VTuber"
+      },
+      "description": {
+        "ja": "冒険配信向けの細めサイドパネル。",
+        "en": "A slim side panel for adventure streams."
+      },
+      "files": {
+        "ja": "ja/pastel-blue-vtuber.json",
+        "en": "en/pastel-blue-vtuber.json"
+      }
+    },
+    {
+      "id": "lavender-diamond-dream",
+      "name": {
+        "ja": "ラベンダー ダイヤ目標",
+        "en": "Lavender Diamond Dream"
+      },
+      "description": {
+        "ja": "ダイヤ目標企画。残り・ペース・割合を2列で表示。",
+        "en": "A two-column diamond goal tracker with pace and share."
+      },
+      "files": {
+        "ja": "ja/lavender-diamond-dream.json",
+        "en": "en/lavender-diamond-dream.json"
+      }
+    },
+    {
+      "id": "mint-cozy-chat",
+      "name": {
+        "ja": "ミント のんびり雑談",
+        "en": "Mint Cozy Chat"
+      },
+      "description": {
+        "ja": "釣り・生活・雑談配信向けのやさしい2列パネル。",
+        "en": "A calm two-column panel for fishing, farming, and chatting."
+      },
+      "files": {
+        "ja": "ja/mint-cozy-chat.json",
+        "en": "en/mint-cozy-chat.json"
+      }
+    },
+    {
+      "id": "peach-building-log",
+      "name": {
+        "ja": "ピーチ 建築記録",
+        "en": "Peach Building Log"
+      },
+      "description": {
+        "ja": "建築配信。素材使用数と作業時間をまとめて表示。",
+        "en": "A building stream panel for materials and session time."
+      },
+      "files": {
+        "ja": "ja/peach-building-log.json",
+        "en": "en/peach-building-log.json"
+      }
+    },
+    {
+      "id": "transparent-bottom-bar",
+      "name": {
+        "ja": "透明 横長ボトムバー",
+        "en": "Transparent Bottom Bar"
+      },
+      "description": {
+        "ja": "ゲーム画面下部へ置く、背景なしの横長4項目。",
+        "en": "A transparent four-stat bar for the bottom of the game view."
+      },
+      "files": {
+        "ja": "ja/transparent-bottom-bar.json",
+        "en": "en/transparent-bottom-bar.json"
+      }
+    },
+    {
+      "id": "mini-icon-counters",
+      "name": {
+        "ja": "ミニ アイコンカウンター",
+        "en": "Mini Icon Counters"
+      },
+      "description": {
+        "ja": "立ち絵の近くへ置く、名前なしの小さな4カウンター。",
+        "en": "Four tiny icon-and-number counters for placement near an avatar."
+      },
+      "files": {
+        "ja": "ja/mini-icon-counters.json",
+        "en": "en/mini-icon-counters.json"
+      }
+    },
+    {
+      "id": "dark-elegant-hardcore",
+      "name": {
+        "ja": "ダークエレガント ハードコア",
+        "en": "Dark Elegant Hardcore"
+      },
+      "description": {
+        "ja": "ハードコア・長期生存企画向けの落ち着いた縦型。",
+        "en": "A restrained vertical panel for hardcore and long survival runs."
+      },
+      "files": {
+        "ja": "ja/dark-elegant-hardcore.json",
+        "en": "en/dark-elegant-hardcore.json"
+      }
+    },
+    {
+      "id": "neon-mob-hunt",
+      "name": {
+        "ja": "ネオン Mob討伐",
+        "en": "Neon Mob Hunt"
+      },
+      "description": {
+        "ja": "討伐数チャレンジ。配信企画向けの派手な2列表示。",
+        "en": "A vivid two-column challenge panel for mob-hunt streams."
+      },
+      "files": {
+        "ja": "ja/neon-mob-hunt.json",
+        "en": "en/neon-mob-hunt.json"
+      }
+    },
+    {
+      "id": "cream-editorial-report",
+      "name": {
+        "ja": "クリーム 配信レポート",
+        "en": "Cream Editorial Report"
+      },
+      "description": {
+        "ja": "情報量を多めに見せたい、読みやすい2列レポート。",
+        "en": "A readable two-column report with room for six statistics."
+      },
+      "files": {
+        "ja": "ja/cream-editorial-report.json",
+        "en": "en/cream-editorial-report.json"
+      }
+    },
+    {
+      "id": "monochrome-clean",
+      "name": {
+        "ja": "モノクロ ミニマル",
+        "en": "Monochrome Minimal"
+      },
+      "description": {
+        "ja": "白背景・黒文字で、動画素材にも合わせやすい縦型。",
+        "en": "A simple black-and-white vertical panel for clean layouts."
+      },
+      "files": {
+        "ja": "ja/monochrome-clean.json",
+        "en": "en/monochrome-clean.json"
+      }
+    },
+    {
+      "id": "single-diamond-counter",
+      "name": {
+        "ja": "単体 ダイヤカウンター",
+        "en": "Single Diamond Counter"
+      },
+      "description": {
+        "ja": "立ち絵横や企画タイトル横へ置く、大きな単体カウンター。",
+        "en": "One large diamond counter for placement beside an avatar or goal title."
+      },
+      "files": {
+        "ja": "ja/single-diamond-counter.json",
+        "en": "en/single-diamond-counter.json"
+      }
+    }
+  ]
+}

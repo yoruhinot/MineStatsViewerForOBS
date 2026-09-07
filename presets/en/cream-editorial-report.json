@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "showTitle": true,
+  "title": "MINE REPORT",
+  "fontPreset": "modern",
+  "accent": "#ff6035",
+  "titleColor": "#171512",
+  "textColor": "#302d29",
+  "labelColor": "#4f4943",
+  "valueColor": "#2835f8",
+  "background": "#f7eee6",
+  "backgroundOpacity": 96,
+  "columns": 2,
+  "panelPadding": 22,
+  "itemGap": 6,
+  "elementGap": 10,
+  "itemWidth": 350,
+  "valueWidth": 135,
+  "columnGap": 20,
+  "titleSize": 42,
+  "iconSize": 38,
+  "labelSize": 20,
+  "valueSize": 36,
+  "radius": 4,
+  "borderWidth": 0,
+  "resolutionScale": 1,
+  "resolutionPreset": "1080",
+  "layoutPreset": "custom",
+  "themePreset": "custom",
+  "labelVisible": true,
+  "customPresets": [],
+  "uiLanguage": "en",
+  "widgets": [
+    {
+      "id": "cream-editorial-report-mined-1",
+      "label": "Blocks mined",
+      "emoji": "⛏",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond_pickaxe",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#2835f8",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ff6035",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "prefix": "minecraft:mined|",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "cream-editorial-report-stone-2",
+      "label": "Stone & deepslate",
+      "emoji": "🪨",
+      "iconKind": "block",
+      "iconId": "minecraft:stone",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#2835f8",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ff6035",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:mined|minecraft:stone",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "cream-editorial-report-diamond-3",
+      "label": "Diamond ore",
+      "emoji": "💎",
+      "iconKind": "block",
+      "iconId": "minecraft:diamond_ore",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#2835f8",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ff6035",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:mined|minecraft:diamond_ore",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_diamond_ore",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "cream-editorial-report-pickaxes-4",
+      "label": "Broken pickaxes",
+      "emoji": "🔨",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond_pickaxe",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#2835f8",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ff6035",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:broken|minecraft:wooden_pickaxe",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:broken|minecraft:stone_pickaxe",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:broken|minecraft:copper_pickaxe",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:broken|minecraft:iron_pickaxe",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:broken|minecraft:golden_pickaxe",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:broken|minecraft:diamond_pickaxe",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:broken|minecraft:netherite_pickaxe",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "cream-editorial-report-playSession-5",
+      "label": "Play time",
+      "emoji": "⏱",
+      "iconKind": "item",
+      "iconId": "minecraft:clock",
+      "source": "session",
+      "operation": "sum",
+      "format": "time",
+      "color": "#2835f8",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": false,
+      "animationType": "color",
+      "animationColor": "#ff6035",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:play_time",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "cream-editorial-report-deaths-6",
+      "label": "Deaths",
+      "emoji": "💀",
+      "iconKind": "item",
+      "iconId": "minecraft:skeleton_skull",
+      "source": "total",
+      "operation": "sum",
+      "format": "number",
+      "color": "#2835f8",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#ff6035",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:deaths",
+          "factor": 1
+        }
+      ]
+    }
+  ]
+}

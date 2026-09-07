@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "showTitle": true,
+  "title": "TODAY'S ADVENTURE",
+  "fontPreset": "readable",
+  "accent": "#8acdf5",
+  "titleColor": "#355f85",
+  "textColor": "#355f85",
+  "labelColor": "#557691",
+  "valueColor": "#397fbd",
+  "background": "#eef8ff",
+  "backgroundOpacity": 92,
+  "columns": 1,
+  "panelPadding": 22,
+  "itemGap": 6,
+  "elementGap": 10,
+  "itemWidth": 390,
+  "valueWidth": 145,
+  "columnGap": 20,
+  "titleSize": 38,
+  "iconSize": 38,
+  "labelSize": 20,
+  "valueSize": 36,
+  "radius": 24,
+  "borderWidth": 2,
+  "resolutionScale": 1,
+  "resolutionPreset": "1080",
+  "layoutPreset": "custom",
+  "themePreset": "custom",
+  "labelVisible": true,
+  "customPresets": [],
+  "uiLanguage": "ja",
+  "widgets": [
+    {
+      "id": "pastel-blue-vtuber-playSession-1",
+      "label": "プレイ時間",
+      "emoji": "⏱",
+      "iconKind": "item",
+      "iconId": "minecraft:clock",
+      "source": "session",
+      "operation": "sum",
+      "format": "time",
+      "color": "#397fbd",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": false,
+      "animationType": "color",
+      "animationColor": "#8acdf5",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:play_time",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "pastel-blue-vtuber-mined-2",
+      "label": "総採掘数",
+      "emoji": "⛏",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond_pickaxe",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#397fbd",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#8acdf5",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "prefix": "minecraft:mined|",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "pastel-blue-vtuber-kills-3",
+      "label": "Mob討伐",
+      "emoji": "⚔",
+      "iconKind": "item",
+      "iconId": "minecraft:diamond_sword",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#397fbd",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#8acdf5",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:mob_kills",
+          "factor": 1
+        }
+      ]
+    },
+    {
+      "id": "pastel-blue-vtuber-deaths-4",
+      "label": "死んだ回数",
+      "emoji": "💀",
+      "iconKind": "item",
+      "iconId": "minecraft:skeleton_skull",
+      "source": "total",
+      "operation": "sum",
+      "format": "number",
+      "color": "#397fbd",
+      "visible": true,
+      "labelVisible": true,
+      "animationEnabled": true,
+      "animationType": "color",
+      "animationColor": "#8acdf5",
+      "animationDuration": 450,
+      "terms": [
+        {
+          "stat": "minecraft:custom|minecraft:deaths",
+          "factor": 1
+        }
+      ]
+    }
+  ]
+}

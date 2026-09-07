@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "showTitle": false,
+  "title": "",
+  "fontPreset": "modern",
+  "accent": "#f08bb8",
+  "titleColor": "#7f4560",
+  "textColor": "#7f4560",
+  "labelColor": "#7f4560",
+  "valueColor": "#db4f91",
+  "background": "#fff0f7",
+  "backgroundOpacity": 84,
+  "columns": 1,
+  "panelPadding": 18,
+  "itemGap": 0,
+  "elementGap": 10,
+  "itemWidth": 240,
+  "valueWidth": 150,
+  "columnGap": 0,
+  "titleSize": 0,
+  "iconSize": 72,
+  "labelSize": 0,
+  "valueSize": 72,
+  "radius": 36,
+  "borderWidth": 3,
+  "resolutionScale": 1,
+  "resolutionPreset": "1080",
+  "layoutPreset": "custom",
+  "themePreset": "custom",
+  "labelVisible": false,
+  "customPresets": [],
+  "uiLanguage": "en",
+  "widgets": [
+    {
+      "id": "single-diamond-counter-diamond-1",
+      "label": "Diamond ore",
+      "emoji": "💎",
+      "iconKind": "block",
+      "iconId": "minecraft:diamond_ore",
+      "source": "session",
+      "operation": "sum",
+      "format": "number",
+      "color": "#db4f91",
+      "visible": true,
+      "labelVisible": false,
+      "animationEnabled": true,
+      "animationType": "pop",
+      "animationColor": "#f08bb8",
+      "animationDuration": 700,
+      "terms": [
+        {
+          "stat": "minecraft:mined|minecraft:diamond_ore",
+          "factor": 1
+        },
+        {
+          "stat": "minecraft:mined|minecraft:deepslate_diamond_ore",
+          "factor": 1
+        }
+      ],
+      "suffixSize": 24,
+      "suffixText": " / 100",
+      "suffixColor": "#db4f91"
+    }
+  ]
+}

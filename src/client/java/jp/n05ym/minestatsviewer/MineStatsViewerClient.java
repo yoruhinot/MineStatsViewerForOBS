@@ -22,6 +22,7 @@ import java.net.InetSocketAddress;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicReference;
@@ -95,7 +96,16 @@ public final class MineStatsViewerClient implements ClientModInitializer {
         if (announced || client.player == null) return;
         announced = true;
         client.gui.chatListener().handleSystemMessage(
-                Component.literal("[MineStats Viewer] F8キーで設定・OBSメニューを開けます"), false);
+                Component.literal("[MineStats Viewer] " + ui(
+                        "F8キーで設定・OBSメニューを開けます",
+                        "Press F8 to open settings and OBS tools")), false);
+    }
+
+    static String ui(String japanese, String english) {
+        String selected = config == null ? "auto" : config.uiLanguage();
+        boolean useEnglish = selected.equals("en")
+                || (selected.equals("auto") && !Locale.getDefault().getLanguage().equals("ja"));
+        return useEnglish ? english : japanese;
     }
 
     private static void update(String id, StatsCounter counter) {
@@ -146,7 +156,9 @@ public final class MineStatsViewerClient implements ClientModInitializer {
         }
         State state = CURRENT.get();
         if (!state.connected()) {
-            text(e, 409, "text/plain; charset=utf-8", "ワールドへ入ってから実行してください");
+            text(e, 409, "text/plain; charset=utf-8", ui(
+                    "ワールドへ入ってから実行してください",
+                    "Join a world before resetting the session"));
             return;
         }
         baseline = new LinkedHashMap<>(state.total());

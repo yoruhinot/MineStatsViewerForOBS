@@ -1,28 +1,27 @@
 # MineStats Viewer for OBS
 
-Minecraft Java Edition 26.2 / Fabric の統計を、OBSへほぼリアルタイム表示するクライアントMODです。全バニラ統計、合計・割合・目標・ペース計算、Minecraftアイコン、自由な見た目調整に対応します。
+Display Minecraft Java Edition 26.2 statistics in OBS in near real time. This client-side Fabric mod includes every vanilla statistic, calculated counters, Minecraft icons, presets, and an English/Japanese visual editor.
 
-## インストール
+## Install
 
-1. [Modrinth App](https://modrinth.com/app)を入れる
-2. [Releases](https://github.com/yoruhinot/MineStatsViewerForOBS/releases/latest)の`.mrpack`を開く
-3. インストール後に「プレイ」
+1. Install the [Modrinth App](https://modrinth.com/app).
+2. Open the `.mrpack` from [Releases](https://github.com/yoruhinot/MineStatsViewerForOBS/releases/latest).
+3. Click **Play**.
 
-既存ワールドは、Modrinth Appのプロファイルフォルダー内にある`saves`へコピーすれば使えます。先にバックアップしてください。
+Press `F8` in a world, open Settings, then copy the suggested URL and size into an OBS Browser Source. Settings save automatically; no server-side mod or statistics-screen refresh is required.
 
-## 使い方
+For manual installation, put the release JAR and [Fabric API](https://modrinth.com/mod/fabric-api) in your `mods` folder.
 
-1. ワールド内で`F8`を押す
-2. 設定画面を開き、右の見本を見ながら調整
-3. OBS URLをコピー
-4. OBSの「ブラウザ」ソースへ貼り、設定画面が提案する幅・高さを入力
+## 日本語
 
-設定は自動保存されます。マルチプレイでも統計画面を開く必要はありません。
+Minecraft Java Edition 26.2の統計を、OBSへほぼリアルタイム表示するFabricクライアントMODです。全バニラ統計、計算カウンター、Minecraftアイコン、プリセット、日英対応の設定画面を搭載しています。
 
-手動導入では、[Releases](https://github.com/yoruhinot/MineStatsViewerForOBS/releases/latest)のJARと[Fabric API](https://modrinth.com/mod/fabric-api)を`mods`へ入れてください。
+1. [Modrinth App](https://modrinth.com/app)を入れます。
+2. [Releases](https://github.com/yoruhinot/MineStatsViewerForOBS/releases/latest)の`.mrpack`を開きます。
+3. **プレイ**を押します。
 
-## ビルド
+ワールド内で`F8`を押し、設定画面のURLと推奨サイズをOBSのブラウザソースへ入力してください。設定は自動保存され、マルチでも統計画面を開く必要はありません。
 
-JDK 25で`./gradlew.bat build`を実行します。
+[Customization design / カスタマイズ設計](docs/CUSTOMIZATION_DESIGN.md)
 
-非公式ファン制作MODです。Mojang StudiosおよびMicrosoftとは関係ありません。
+Build with JDK 25 and `./gradlew.bat build`. Unofficial fan-made mod; not associated with Mojang Studios or Microsoft.

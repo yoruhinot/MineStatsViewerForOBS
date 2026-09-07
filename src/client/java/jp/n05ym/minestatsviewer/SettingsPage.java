@@ -15,7 +15,7 @@ final class SettingsPage {
             if (input == null) throw new IOException("settings.html is missing");
             return new String(input.readAllBytes(), StandardCharsets.UTF_8);
         } catch (IOException e) {
-            return "<!doctype html><meta charset=utf-8><h1>設定画面を読み込めませんでした</h1><pre>"
+            return "<!doctype html><meta charset=utf-8><h1>Could not load settings / 設定画面を読み込めませんでした</h1><pre>"
                     + e.getMessage() + "</pre>";
         }
     }
